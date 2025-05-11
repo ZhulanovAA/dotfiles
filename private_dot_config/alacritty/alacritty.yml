@@ -1,0 +1,37 @@
+font:
+  normal:
+    family: JetBrainsMono NFM
+    style: Regular
+
+  bold:
+    family: JetBrainsMono NFM
+    style: Bold
+
+  italic:
+    family: JetBrainsMono NFM
+    style: Italic
+
+  bold_italic:
+    family: JetBrainsMono NFM
+    style: Bold Italic
+
+  size: 16
+
+# cursor:
+#   style:
+#     shape: Beam
+#   vi_mode_style:
+#     shape: Block
+
+window:
+  opacity: 0.9
+  decorations: None
+
+colors:
+  transparent_background_colors: true
+
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml

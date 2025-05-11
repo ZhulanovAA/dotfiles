@@ -1,0 +1,35 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defvar
+  tap-time 200
+  hold-time 300
+)
+
+(defsrc)
+
+(defoverrides
+  (caps) (esc)
+)
+
+(deflayermap (work)
+  a (tap-hold-release $tap-time $hold-time a lalt)
+  s (tap-hold-release $tap-time $hold-time s lmet)
+  d (tap-hold-release $tap-time $hold-time d lsft)
+  f (tap-hold-release $tap-time $hold-time f lctl)
+  j (tap-hold-release $tap-time $hold-time j lctl)
+  k (tap-hold-release $tap-time $hold-time k rsft)
+  l (tap-hold-release $tap-time $hold-time l lmet)
+  ; (tap-hold-release $tap-time $hold-time ; lalt)
+  grv (tap-hold-release $tap-time $hold-time grv (layer-while-held layers))
+)
+
+(deflayermap (games)
+  grv (tap-hold-release $tap-time $hold-time grv (layer-while-held layers))
+)
+
+(deflayermap (layers)
+  w (layer-switch work)
+  g (layer-switch games)
+)
