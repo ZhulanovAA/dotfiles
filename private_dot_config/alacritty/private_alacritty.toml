@@ -1,0 +1,29 @@
+
+[colors]
+transparent_background_colors = true
+
+[font]
+size = 16
+
+[font.bold]
+family = "JetBrainsMono NFM"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono NFM"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMono NFM"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMono NFM"
+style = "Regular"
+
+[window]
+decorations = "None"
+opacity = 0.9
+
+[general]
+import = ["/home/andrey/.config/alacritty/catppuccin/catppuccin-mocha.toml"]
