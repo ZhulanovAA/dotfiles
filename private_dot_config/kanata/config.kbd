@@ -9,27 +9,34 @@
 
 (defsrc)
 
-(defoverrides
-  (caps) (esc)
-)
+;; (defoverrides
+;;   (caps) (esc)
+;; )
 
 (deflayermap (work)
-  a (tap-hold-release $tap-time $hold-time a lalt)
-  s (tap-hold-release $tap-time $hold-time s lmet)
-  d (tap-hold-release $tap-time $hold-time d lsft)
-  f (tap-hold-release $tap-time $hold-time f lctl)
-  j (tap-hold-release $tap-time $hold-time j lctl)
-  k (tap-hold-release $tap-time $hold-time k rsft)
-  l (tap-hold-release $tap-time $hold-time l lmet)
-  ; (tap-hold-release $tap-time $hold-time ; lalt)
-  grv (tap-hold-release $tap-time $hold-time grv (layer-while-held layers))
+  caps esc
+  a (tap-hold $tap-time $hold-time a lalt)
+  s (tap-hold $tap-time $hold-time s lmet)
+  d (tap-hold $tap-time $hold-time d lsft)
+  f (tap-hold $tap-time $hold-time f lctl)
+  j (tap-hold $tap-time $hold-time j lctl)
+  k (tap-hold $tap-time $hold-time k rsft)
+  l (tap-hold $tap-time $hold-time l lmet)
+  ; (tap-hold $tap-time $hold-time ; lalt)
+  rctl (tap-hold $tap-time $hold-time rctl (layer-while-held layers))
 )
 
 (deflayermap (games)
-  grv (tap-hold-release $tap-time $hold-time grv (layer-while-held layers))
+  caps esc
+  rctl (tap-hold $tap-time $hold-time rctl (layer-while-held layers))
+)
+
+(deflayermap (dota)
+  rctl (tap-hold $tap-time $hold-time esc (layer-while-held layers))
 )
 
 (deflayermap (layers)
   w (layer-switch work)
   g (layer-switch games)
+  d (layer-switch dota)
 )
